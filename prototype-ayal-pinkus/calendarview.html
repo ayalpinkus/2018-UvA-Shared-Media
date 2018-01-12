@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html>
+  <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <link rel="stylesheet" type="text/css" href="fonts.css" />
+    <link rel="stylesheet" type="text/css" href="login-3.0.css" />
+    <script src="database-fake.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+<div class="calendar-container">
+
+<div class="calendar-drop2"> <div>
+<div class="calendar-drop1"> <div>
+
+
+<div class="calendar">
+  <div class="month">
+    <ul>
+      <li class="prev unselectable" onclick="javascript:GoMonth(-1);">&#10094;</li>
+      <li class="next unselectable" onclick="javascript:GoMonth( 1);">&#10095;</li>
+      <li id="monthtitle" class="unselectable">December 2017</li>
+    </ul>
+  </div>
+  <ul class="weekdays"><li class="unselectable">Mo</li><li class="unselectable">Tu</li><li class="unselectable">We</li><li class="unselectable">Th</li><li class="unselectable">Fr</li><li class="unselectable">Sa</li><li class="unselectable">Su</li></ul>
+  <ul id="days"><li class="previousmonth">28</li><li class="previousmonth">29</li><li class="previousmonth">30</li><li class="thismonth">1</li><li class="thismonth">2</li><li class="thismonth">3</li><li class="thismonth">4</li><li class="thismonth">5</li><li class="thismonth">6</li><li class="thismonth">7</li><li class="thismonth">8</li><li class="thismonth">9</li><li class="thismonth active">10</li><li class="thismonth">10</li><li class="thismonth">11</li><li class="thismonth">12</li><li class="thismonth">13</li><li class="thismonth">14</li><li class="thismonth">15</li><li class="thismonth">16</li><li class="thismonth">17</li><li class="thismonth">18</li><li class="thismonth">19</li><li class="thismonth">20</li><li class="thismonth">21</li><li class="thismonth">22</li><li class="thismonth">23</li><li class="thismonth">24</li><li class="thismonth">25</li><li class="thismonth">26</li><li class="thismonth">27</li><li class="thismonth">28</li><li class="thismonth">29</li><li class="thismonth">30</li><li class="thismonth">31</li></ul>
+</div> 
+</div> 
+
+<div class="rightpane">
+
+<center>
+<span class="weekdaybig unselectable">Shared Calendar</span><br/>
+<span class="datesubtle"><span onclick="javascript:GoMember(-1);" class="unselectable" style="margin-right:16px;">&#10094;</span> <div class='memberbullet' id='currentbullet' style="background:#ff0000;"> </div> <span id="currentmember" contenteditable="true" onkeypress="preventEnter(event)" onkeyup='javascript:UpdateMember(this.innerHTML);' >Name household member</span> <span onclick="javascript:GoMember(1);" class="unselectable" style="margin-left:16px;">&#10095;</span></span>
+
+
+<p>
+</center>
+<span class="weekdaybig" id="dayofweek">Wednesday</span>
+<span class="datesubtle" id="datestr">13th december 2017</span>
+<center>
+
+<div id="appointments">
+  <div class="appointment odd">
+    <div class="memberbullet" style="background:#b18bd8;"></div>
+    <div class="appointmenttext">
+      <div class="appointmenttitle" contenteditable="true" onkeypress="preventEnter(event)">Doctors appointment</div>
+      <div class="appointmenttime" contenteditable="true" onkeypress="preventEnter(event)">8:00 am - 8:30 am</div>
+    </div>
+  </div>
+
+  <div class="appointment even">
+    <div class="memberbullet" style="background:#b18bd8;"></div>
+    <div class="appointmenttext">
+      <div class="appointmenttitle" contenteditable="true" onkeypress="preventEnter(event)">Buy tickets for the movies</div>
+      <div class="appointmenttime" contenteditable="true" onkeypress="preventEnter(event)">8:00 am - 8:30 am</div>
+    </div>
+  </div>
+
+  <div class="appointment odd">
+    <div class="memberbullet" style="background:#9afcd6;"></div>
+    <div class="appointmenttext">
+      <div class="appointmenttitle" contenteditable="true" onkeypress="preventEnter(event)">Dinner with my girlfriend </div>
+      <div class="appointmenthousemembers" contenteditable="true" onkeypress="preventEnter(event)">(Name other household members)</div>
+      <div class="appointmenttime" contenteditable="true" onkeypress="preventEnter(event)">8:00 am - 8:30 am</div>
+    </div>
+  </div>
+
+  <div class="appointment even">
+    <div class="memberbullet" style="background:#fa7879;"></div>
+    <div class="appointmenttext">
+      <div class="appointmenttitle" contenteditable="true" onkeypress="preventEnter(event)">Doctors appointment</div>
+      <div class="appointmenthousemembers" contenteditable="true" onkeypress="preventEnter(event)">(Click to add other household members)<img class="trashcan" src="trashcan.svg" /></div>
+      <div class="appointmenttime" contenteditable="true" onkeypress="preventEnter(event)">8:00 am - 8:30 am</div>
+    </div>
+  </div>
+
+  <div class="appointment active">
+    <div class="memberbullet" style="background:#ffffff;"></div>
+    <div class="appointmenttext">
+      <div class="appointmenttitle" contenteditable="true" onkeypress="preventEnter(event)">Presentation UvA</div>
+      <div class="appointmenttime active" contenteditable="true" onkeypress="preventEnter(event)">8:00 am - 8:30 am</div>
+    </div>
+  </div>
+
+  <div class="appointment even">
+    <div class="memberbullet" style="background:#b18bd8;"></div>
+    <div class="appointmenttext">
+      <div class="appointmenttitle"contenteditable="true"onkeypress="preventEnter(event)">Click to edit event</div>
+      <div class="appointmenttime" contenteditable="true" onkeypress="preventEnter(event)">Click to edit time</div>
+    </div>
+  </div>
+
+</div> <!-- appointments --!>
+
+
+<div>
+  <div class="plusbutton unselectable" onclick="javascript:AddNewAppointment();">+</div>
+</div>
+</center>
+
+</div>
+</div>
+
+
+  </body>
+</html>
+
