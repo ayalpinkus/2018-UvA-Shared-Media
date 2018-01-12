@@ -1,0 +1,153 @@
+<html>
+  <head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="-1"/>
+    <link rel="stylesheet" type="text/css" href="fonts.css" />
+<style>
+
+* {
+
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+html, body
+{
+  /* So it aligns at the top of the page without a white gutter. */
+  margin:0;
+  padding:0.16px;
+  border:0;
+  height: 100%;
+  background-color:#e0e0e0;
+}
+
+body 
+{
+  font-family: Fira Sans, sans-serif;
+  font-size:16px;
+  color:#ffffff;
+  text-align:center;
+}
+
+.leftpane
+{
+  float:left;
+  width:50%;
+  height:100%;
+}
+
+.rightpane
+{
+  float:right;
+  width:50%;
+  height:100%;
+}
+
+.button
+{
+  margin:5%;
+  border-radius:16px;
+}
+
+.calendarbutton
+{
+  width:90%;
+  height:90%;
+  background:#ea5f60;
+}
+
+/* These had value 92, set it to 76 for hover */
+
+.calendarbutton:hover { background:#c24f4f; }
+.weatherbutton:hover  { background:#52bac2; }
+
+.newsfeedbutton:hover { background:#53c25f; }
+.notesbutton:hover    { background:#bd53c2; }
+
+.weatherbutton, .newsfeedbutton, .notesbutton, .twobuttons
+{
+  height:18.7%;
+}
+
+.weatherbutton
+{
+  background:#64e1eb;
+  width:90%;
+}
+
+.newsfeedbutton
+{
+  background:#64ea73;
+  width:90%;
+}
+
+.notesbutton
+{
+  background:#e464ea;
+  width:90%;
+}
+
+.twobuttons
+{
+  text-align:center;
+  margin-left:5%;
+  width:90%;
+}
+
+.smallleft
+{
+  float:left;
+  background:#e7eb79;
+  width:47.5%;
+  height:100%;
+  border-radius:0.25in;
+}
+.smallleft:hover
+{
+  background:#bec264;
+}
+
+.smallright
+{
+  float:right;
+  background:#eba363;
+  width:47.5%;
+  height:100%;
+  border-radius:0.25in;
+}
+
+
+</style>
+
+
+<script type="text/javascript">
+
+function postit()
+{
+  var left = Math.floor(400*Math.random());
+  var top = Math.floor(600*Math.random());
+  window.open('postit.html', '_blank',
+      'left='+left+',top='+top+',width=300,height=200,toolbar=0,resizable=0');
+}
+
+</script>
+
+
+  </head>
+  <body>
+    <div class="leftpane">
+      <div class="button weatherbutton" onclick="alert('No screen yet');">Weather (TBD)</div>
+      <div class="button newsfeedbutton" onclick="alert('No screen yet');">Newsfeed (TBD)</div>
+      <div class="button notesbutton" onclick="postit(); return false;" >Notes</div>
+      <div class="twobuttons">
+        <div class="smallleft" onclick="window.open('admin.html', 'calendarwin','width=300,height=300,toolbar=1,resizable=1'); return false;">Admin</div>
+        <div class="smallright" onclick="alert('No screen yet');">(TBD)</div>
+      </div>
+    </div><div class="rightpane">
+      <div class="button calendarbutton" onclick="window.open('login.html', 'calendarwin','width=800,height=400,toolbar=1,resizable=1'); return false;">Calendar<p>(I made it a lot smaller, I saw the Microsoft Surface table has a 1024x768 pixel resolution, calendar now pops up at 800x400 pixels, this may be a bit small on higher-res screens)</div>
+    </div>
+  </body>
+</html>
